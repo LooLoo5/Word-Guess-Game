@@ -1,4 +1,4 @@
-prompt("Press any key to start the game!");
+ prompt("Press any key to start the game!");
 
 //Game variables
     var alphabetArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "x", "z"];
@@ -9,9 +9,14 @@ prompt("Press any key to start the game!");
 
     var ranLetter = ranLetter;
 
-prompt("Guess What Letter I am Thinking of!");
+ prompt("Guess What Letter I am Thinking of!");
 
-element.onkeyup = function (event) {
+ //started to try a new "begining" comand
+var compVoice = document.getElementById("compVoice");
+compVoice.innerHTML("press any key to start, fam");
+
+
+document.onkeyup = function (event) {
     var playerGuess = keyWasPressed;
 }
 
