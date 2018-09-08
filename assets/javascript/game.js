@@ -1,23 +1,26 @@
- prompt("Press any key to start the game!");
+
 
 //Game variables
     var alphabetArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "x", "z"];
 
     var letter = alphabetArr[Math.floor(Math.random() * alphabetArr.length)];
 
-    var playerGuess = 0;
+    var playerGuess = [];
 
     var ranLetter = ranLetter;
 
- prompt("Guess What Letter I am Thinking of!");
-
+    console.log(letter);
  //started to try a new "begining" comand
-var compVoice = document.getElementById("compVoice");
-compVoice.innerHTML("press any key to start, fam");
+function startGame(){
+    playerGuess[letter] = letter;
+    document.getElementById("displayRandomLetter").innerHTML = letter;
 
 
-document.onkeyup = function (event) {
-    var playerGuess = keyWasPressed;
+ var computerChoice = alphabetArr[letter];
+
+
+function.onkeyup = function(event) {
+    var playerGuess = event.key;
 }
 
 
@@ -29,4 +32,5 @@ document.onkeyup = function (event) {
   var newGuess= alphabetArr[Math.floor(Math.random()*26)];
     ranLetter=newGuess;
     console.log("new guess is :" + newGuess);
-
+}
+startGame();
